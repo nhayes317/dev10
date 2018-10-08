@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+	Name: Nia Hayes
+	Date Created: 10/3/2018
+-->
+<html lang="en">
+<head>
+	<title>Contact Us</title>
+	<link href=	"style/restaurantStyles.css" rel="stylesheet" type="text/css" />
+	<style>
+	
+		body {
+			background-color: #f2e6ff;
+		}
+		
+		nav {
+			background-color: #fff;
+			border-top: 3px dashed #546a7b;
+			border-bottom: 3px dashed #546a7b;
+			margin-top: 4px;
+			
+		}
+		
+		nav a {
+			background-color: #9900cc;
+			color: #fef9ff;
+			padding: 8px;
+			border: thin solid #0d1f2d;
+			text-decoration: none;
+			text-align: center;
+			display: block;
+			margin: 20px;
+			width: 100px;
+		}
+		
+		nav a:hover {
+			font-weight: bold;
+		}
+		
+		nav a:visited {
+			color: #ffb3b3;
+		}
+		
+		nav a:active {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Sushi Deluxe</h1>
+		</header>
+		
+	<nav>
+		<p><a href="home.html">Home</a><p>
+		<p><a href="menu.html">Menu</a><p>
+		<p><a href="contact_us.html">Contact Us</a><p>
+	</nav>
+	<br />
+	<form action="submit.html" method="POST">
+			
+			<label for="name"><strong>Name:</strong></label>
+			<input type="text" id="name" name="name"> <br />
+			<label for="email"><strong>Email:</strong></label>
+			<input type="text" id="email" name="email"> <br />
+			<label for="phone"><strong>Phone Number:</strong></label>
+			<input type="text" id="phone" name="phone"> <br />
+			
+			<label for="reason"><strong>Reason for Inquiry:</strong></label>
+			<select id="reason" name="reason">
+			<option value="default" selected>Catering</option>
+			<option value="private">Private Party</option>
+			<option value="feedback">Feedback</option>
+			<option value="other">Other</option>
+			</select><br />
+			
+			<label for="info"><strong>Additional Information:</strong></label>
+			<textarea id="info" name="info"></textarea>
+			
+			<fieldset>
+			<legend><strong>Have you been to the restaurant?:</strong></legend><br />
+			<input type="radio" id="choice1" name="answer" value="no">
+			<label for="choice1">No</label><br />
+			<input type="radio" id="choice2" name="answer" value="yes">
+			<label for="choice2">Yes</label><br />
+			
+			<fieldset>
+			<legend><strong>Best days to contact you:</strong></legend><br />
+			<input type="checkbox" id="monday" name="contact" value="monday">
+			<label for="monday">M</label><br />
+			<input type="checkbox" id="tuesday" name="contact" value="tuesday">
+			<label for="tuesday">T</label><br />
+			<input type="checkbox" id="wednesday" name="contact" value="wednesday">
+			<label for="wednesday">W</label><br />
+			<input type="checkbox" id="thursday" name="contact" value="thursday">
+			<label for="thursday">Th</label><br />
+			<input type="checkbox" id="friday" name="contact" value="friday">
+			<label for="friday">F</label><br />
+			</fieldset>
+			
+			<input type="submit" name="submit" value="Send Request">
+			
+		<footer>
+			<p>100 Fish Rd, Sea Town, New Jersey, 12345, (123) 555-1234</p>
+		</footer>	
+	
+	</main>
+</body>
+</html>
