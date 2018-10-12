@@ -1,28 +1,42 @@
-function playGame() {
-	var bet=document.getElementById("bet").value;
-	var money=bet;
+function rollDice() {
 	var dice1=Math.floor(Math.random()*6)+1;
 	var dice2=Math.floor(Math.random()*6)+1;
 	var totalDice=dice1+dice2;
+  return totalDice;
+}
+
+function validate( ){
+		if ( document.lucky.bet.value <= 0)
+		{
+			alert ( "Starting bet must be greater than 0!" );
+			valid = false;
+		}
+}
+		
+function playGame() {
+	var bet=document.getElementById("bet").value;
+	var money=bet;
 	var moneyTotal=[];
 	var rollTally;
 	var maxMoney;
 	var maxRoll;
-	var dice1;
-	var dice2;
+	
+	validate();
 	
 	while (money > 0) {
+		var totalDice= rollDice();
+		console.log(rollDice());
 		if (totalDice==7) {
 			money+=4;
 		}
 		else {
 			money--;
 		}
+		
 		moneyTotal.push(money);
-		dice1=Math.floor(Math.random()*6)+1;
-		dice2=Math.floor(Math.random()*6)+1;
 		
 	}
+	
 	
 	rollTally=moneyTotal.length;
 	maxMoney=Math.max.apply(Math,moneyTotal);
