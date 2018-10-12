@@ -9,7 +9,7 @@ function validate( ){
 		if ( document.lucky.bet.value <= 0)
 		{
 			alert ( "Starting bet must be greater than 0!" );
-			valid = false;
+			return false;
 		}
 }
 		
