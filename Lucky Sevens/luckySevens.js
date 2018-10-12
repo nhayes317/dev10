@@ -25,7 +25,6 @@ function playGame() {
 	
 	while (money > 0) {
 		var totalDice= rollDice();
-		console.log(rollDice());
 		if (totalDice==7) {
 			money+=4;
 		}
